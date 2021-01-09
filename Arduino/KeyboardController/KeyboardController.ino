@@ -199,7 +199,13 @@ void handleKeypress(unsigned char key) {
             break;
         case KBD_ASTERISK:
             sendKey("*");
-            break
+            break;
+        case KBD_IFR_PLUS:
+            sendKey("+");
+            break;
+        case KBD_VFR_SLASH:
+            sendKey("/");
+            break;
         default:
             if (mode == 0) {
                 sendKey(key);
