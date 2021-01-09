@@ -198,13 +198,13 @@ void handleKeypress(unsigned char key) {
             sendKey(KEY_RETURN);
             break;
         case KBD_ASTERISK:
-            sendKey("*");
+            sendKey('*');
             break;
         case KBD_IFR_PLUS:
-            sendKey("+");
+            sendKey('+');
             break;
         case KBD_VFR_SLASH:
-            sendKey("/");
+            sendKey('/');
             break;
         default:
             if (mode == 0) {
