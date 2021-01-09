@@ -178,7 +178,7 @@ void handleKeypress(unsigned char key) {
         }
     }
 
-    switch (key) {
+    switch (key) { // Keymappings for all modes
         case KBD_0 ... KBD_9:
             sendKey(key);
             break;
@@ -197,6 +197,9 @@ void handleKeypress(unsigned char key) {
         case KBD_ENTER:
             sendKey(KEY_RETURN);
             break;
+        case KBD_ASTERISK:
+            sendKey("*");
+            break
         default:
             if (mode == 0) {
                 sendKey(key);
@@ -204,7 +207,7 @@ void handleKeypress(unsigned char key) {
             break;
     }
 
-    if (mode == VSTARS) {
+    if (mode == VSTARS) { // Keymappings for vSTARS
         switch (key) {
             case KBD_TRIANGLE:
                 sendKey('~');
