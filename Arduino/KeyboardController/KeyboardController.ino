@@ -276,7 +276,7 @@ int findInKeyArray(byte key) {
 
 void initEEPROM() {
     return 0; // disable this function
-    CONFIG newConfig = {};
+    /*CONFIG newConfig = {};
     COMMAND newCommand = {};
 
     newConfig.HEADER = 0xAA;
@@ -295,5 +295,5 @@ void initEEPROM() {
     }
 
     EEPROM.put(0, newConfig);
-    config = newConfig;
+    config = newConfig;*/
 }
