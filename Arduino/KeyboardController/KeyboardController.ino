@@ -275,6 +275,7 @@ int findInKeyArray(byte key) {
 }
 
 void initEEPROM() {
+    return 0; // disable this function
     CONFIG newConfig = {};
     COMMAND newCommand = {};
 
