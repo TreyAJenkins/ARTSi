@@ -167,6 +167,12 @@ void sendCTRL(unsigned char key) {
     Keyboard.releaseAll();
 }
 
+void sendShift(unsigned char key) {
+    Keyboard.press(KEY_LEFT_SHIFT);
+    Keyboard.press(key);
+    Keyboard.releaseAll();
+}
+
 void handleKeypress(unsigned char key) {
 
     if (SHIFT == 1) {
@@ -184,9 +190,6 @@ void handleKeypress(unsigned char key) {
             break;
         case KBD_A ... KBD_Z:
             sendKey(key);
-            break;
-        case KBD_CLEAR:
-            sendKey(KEY_ESC);
             break;
         case KBD_BACK_SPACE:
             sendKey(KEY_BACKSPACE);
@@ -215,6 +218,9 @@ void handleKeypress(unsigned char key) {
 
     if (mode == VSTARS) { // Keymappings for vSTARS
         switch (key) {
+            case KBD_CLEAR:
+                sendKey(KEY_ESC);
+                break;
             case KBD_TRIANGLE:
                 sendKey('~');
                 break;
@@ -271,6 +277,74 @@ void handleKeypress(unsigned char key) {
                 break;
             case KBD_M15: // SITE
                 sendCTRL(KEY_F11);
+                break;
+        }
+    }
+    if (mode == VERAM) { // Keymappings for vSTARS
+        switch (key) {
+            case KBD_INIT_CNTL:
+                sendKey(KEY_F3);
+                break;
+            case KBD_TERM_CNTL:
+                sendKey(KEY_F4);
+                break;
+            case KBD_HDN_OFF:
+                sendKey(KEY_F5);
+                break;
+            case KBD_TRK_SUSP:
+                sendKey("Q");
+                sendKey("H");
+                break;
+            case KBD_FLT_DATA:
+                sendKey(KEY_F6);
+                break;
+            case KBD_M1:
+                sendKey(KEY_F1);
+                break;
+            case KBD_MAP:
+                sendKey(KEY_F12);
+                break;
+            case KBD_MULTI_FUNC:
+                sendKey("Q");
+                sendKey("S");
+                break;
+            case KBD_TRIANGLE:
+                sendKey("`");
+                break;
+            case KBD_F12:
+                sendShift(KEY_F12);
+                break;
+            case KBD_F8:
+                sendKey("Q");
+                sendKey("Q");
+                break;
+            case KBD_F9:
+                sendKey("Q");
+                sendKey("B");
+                break;
+            case KBD_F10:
+                sendKey(KEY_F10);
+                break;
+            case KBD_CA:
+                sendKey(KEY_F11);
+                break;
+            case KBD_F13:
+                sendKey("Q");
+                sendKey("F");
+                break;
+            case KBD_F14:
+                sendKey("A");
+                sendKey("M");
+                break;
+            case KBD_TGT_GEN:
+                sendKey("V");
+                sendKey("P");
+                break;
+            case KBD_F16:
+                sendKey(KEY_HOME);
+                break;
+            case KBD_CLEAR:
+                sendCTRL(KEY_DELETE);
                 break;
         }
     }
