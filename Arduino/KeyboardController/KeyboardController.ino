@@ -295,8 +295,8 @@ void handleKeypress(unsigned char key) {
                 sendKey(KEY_F5);
                 break;
             case KBD_TRK_SUSP:
-                sendKey("Q");
-                sendKey("H");
+                sendKey('Q');
+                sendKey('H');
                 break;
             case KBD_FLT_DATA:
                 sendKey(KEY_F6);
@@ -308,22 +308,22 @@ void handleKeypress(unsigned char key) {
                 sendKey(KEY_F12);
                 break;
             case KBD_MULTI_FUNC:
-                sendKey("Q");
-                sendKey("S");
+                sendKey('Q');
+                sendKey('S');
                 break;
             case KBD_TRIANGLE:
-                sendKey("`");
+                sendKey('`');
                 break;
             case KBD_F12:
                 sendShift(KEY_F12);
                 break;
             case KBD_F8:
-                sendKey("Q");
-                sendKey("Q");
+                sendKey('Q');
+                sendKey('Q');
                 break;
             case KBD_F9:
-                sendKey("Q");
-                sendKey("B");
+                sendKey('Q');
+                sendKey('B');
                 break;
             case KBD_F10:
                 sendKey(KEY_F10);
@@ -332,16 +332,16 @@ void handleKeypress(unsigned char key) {
                 sendKey(KEY_F11);
                 break;
             case KBD_F13:
-                sendKey("Q");
-                sendKey("F");
+                sendKey('Q');
+                sendKey('F');
                 break;
             case KBD_F14:
-                sendKey("A");
-                sendKey("M");
+                sendKey('A');
+                sendKey('M');
                 break;
             case KBD_TGT_GEN:
-                sendKey("V");
-                sendKey("P");
+                sendKey('V');
+                sendKey('P');
                 break;
             case KBD_F16:
                 sendKey(KEY_HOME);
