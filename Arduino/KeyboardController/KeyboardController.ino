@@ -16,8 +16,8 @@ bool TRK_BTN[5];
 int TRK_SENS = 10;
 bool TRK_INVRT = true;
 
-#define VSTARS 1
-#define VERAM 2
+#define VSTARS 0
+#define VERAM 1
 
 #define DEBUG 0
 
