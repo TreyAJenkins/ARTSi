@@ -22,6 +22,7 @@ bool TRK_INVRT = true;
 #define DEBUG 0
 
 #define SHIFT TRK_BTN[0]
+#define MODE_SELECT TRK_BTN[4]
 
 void(* resetFunc) (void) = 0;
 
@@ -174,6 +175,8 @@ void sendShift(unsigned char key) {
 }
 
 void handleKeypress(unsigned char key) {
+
+    mode = MODE_SELECT;
 
     if (SHIFT == 1) {
         switch (key) {
