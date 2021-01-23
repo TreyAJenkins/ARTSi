@@ -214,7 +214,7 @@ void handleKeypress(unsigned char key) {
             break;
         default:
             if (mode == 0) {
-                sendKey(key);
+                //sendKey(key);
             }
             break;
     }
